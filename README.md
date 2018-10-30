@@ -1,2 +1,2 @@
-### redis-command-book
+### redis-reference
 
