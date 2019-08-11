@@ -14,3 +14,22 @@
 - redis-check-aof | AOF文件修复
 - redis-check-dump | RDB文件检查
 - redis-sentinel | Sentinel服务器
+
+#### Redis 安装验证
+
+- ps -ef | grep redis
+- netstat -antp | grep redis
+- redis-cli -h ip -p port ping
+
+#### Redis 的三种启动方式
+
+- redis-server
+- reids-server --port 6380
+- redis-server configPath
+
+#### Redis 常用配置
+
+- deamonize  是否以守护进程的方式启动
+- port Redis 对外端口
+- logfile Redis 系统日志名称
+- dir  Redis 工作目录（存放日志，持久化文件等）
