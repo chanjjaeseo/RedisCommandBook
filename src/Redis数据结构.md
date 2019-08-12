@@ -53,7 +53,26 @@
   - 数据指针(ptr)
   - 虚拟内存(vm)
   - 其他信息
-  
+
+#### String
+ 
+- 场景: 缓存、计数器、分布式锁
+- 数据结构
+  - [key] [value]
+- API
+  - set [key] [value] 设置，如果值则覆盖
+  - get [key] 新增
+  - del [key] 删除
+  - setnx [key] [value] key不存在才设置
+  - setxx [key] [value] key存在才设置
+  - incr/decr [key]  计数器+1
+  - incrby/decrby [key] [n] 计数器+n
+  - mget [key1] [key2] [key3] ...[keyN] 批量获取
+  - mset [key1] [value1] [key2] [value2] ...[keyN] [valueN] 批量设置
+  - getset [key] [newvalue] 设置新值返回旧值
+  - append [key] [value] 追加value的值
+  - strlen [key] 返回字符串长度
+
 #### Hash 
   
   - 数据结构
@@ -64,7 +83,7 @@
     - hdel [key] [field] 删除hash key的某个field
     - hgetall [key] 获取hash key对应的多有信息
     - hexists [key] [field] 判断key是否有field
-    - hlen key 获取key下field的数量
+    - hlen [key] 获取key下field的数量
     - hvals [key] 获取hash key所有value
     - hkeys [key] 获取hash key下的所有field
     - hmget [key] [field1] [field2] [field3] ... [fieldN] 获取批量key下field的信息
@@ -111,15 +130,7 @@
   - zcount [key] [minScore] [maxScore] 范围内分数的元素个数
   - zremrangebyrank [key] [start] [end] 删除范围内的元素(根据排名)
   - zremrangebyscore [key] [minScore] [maxScore] 范围内删除元素(根据分值)
-  - zrevrank
-  - zrevrange
-  - zrevrangebyscore
-  - zinterstore
-  - zunionstore
-
-#### String
-
-
-
-    
+  - zrevrank 降序排列
+  - zrevrange 降序排列
+  - zrevrangebyscore 降序排列
    
