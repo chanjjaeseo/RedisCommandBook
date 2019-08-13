@@ -1,7 +1,8 @@
-## Redis 两种高可用方式
+## Redis 高可用方式
 
 1. redis 主从 + 哨兵 (2.x支持)
 2. redis cluster（集群模式）（3.x支持）
+3. proxy(tweproxy、codis）
 
 ## Redis 主从哨兵
 
